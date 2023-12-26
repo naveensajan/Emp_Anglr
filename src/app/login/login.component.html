@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="vector-image"> 
+    <img src="https://cdni.iconscout.com/illustration/premium/thumb/login-3305943-2757111.png" alt="Vector Image">
+  </div>
+  <form>
+    <h1>LOGIN&nbsp;<i class="fas fa-lock"></i></h1>
+    <div class="form-group">
+      <label for="username">Username:</label>
+      <input type="text" class="form-control" id="username" [(ngModel)]="username" name="username"
+        placeholder="Enter your username..." required />
+    </div>
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input type="password" class="form-control" id="password" [(ngModel)]="password" name="password"
+        placeholder="Enter your password..." required />
+    </div>
+    <button type="button" class="btn btn-outline-primary btn-block" (click)="login()">Login</button>
+  </form>
+</div>

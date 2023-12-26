@@ -1,0 +1,68 @@
+
+<a class="btn ms-5 me-5 mt-3" (click)="goBack()"><i class="fas fa-arrow-left" style="color: #000000"></i></a>
+
+<!-- add form -->
+<div class="container">
+  <h2 style="text-align: center;">
+    Add Employee <i class="fas fa-user" style="color: #4259ae"></i>
+  </h2>
+
+  <form class="form mt-2" (ngSubmit)="onSubmit()" #employeeForm="ngForm">
+    <div class="mb-3">
+      <label for="username" class="form-label">username:</label>
+      <input type="text" id="username" name="username" class="form-control" [(ngModel)]="employee.username" required />
+    </div>
+    <div class="mb-3">
+      <label for="password" class="form-label">password:</label>
+      <input type="password" id="password" name="password" class="form-control" [(ngModel)]="employee.password"
+        required />
+    </div>
+    <div class="mb-3">
+      <label for="name" class="form-label">Name:</label>
+      <input type="text" id="name" name="name" class="form-control" [(ngModel)]="employee.name" required />
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">Email:</label>
+      <input type="email" id="email" name="email" class="form-control" [(ngModel)]="employee.email" required email />
+    </div>
+    <div class="mb-3">
+      <label for="designation" class="form-label">designation :</label>
+      <input type="text" id="designation" name="designation" class="form-control" [(ngModel)]="employee.designation"
+        required />
+    </div>
+    <div class="mb-3">
+      <label for="phone" class="form-label">Phone:</label>
+      <input type="number" id="phone" name="phone" class="form-control" [(ngModel)]="employee.phone" required
+        pattern="[0-9]{10}" />
+    </div>
+    <div class="mb-3">
+      <label for="age" class="form-label">Age:</label>
+      <input type="number" id="age" name="age" class="form-control" [(ngModel)]="employee.age" required />
+    </div>
+    <div class="mb-3">
+      <label for="dob" class="form-label">Date of Birth:</label>
+      <input type="date" id="dob" name="dob" class="form-control" [(ngModel)]="employee.dob" required />
+    </div>
+    <div class="mb-3">
+      <label for="image" class="form-label">Image URL:</label>
+      <input type="text" id="image" name="image" class="form-control" [(ngModel)]="employee.image" />
+    </div>
+    <div class="mb-3">
+      <label for="bloodGroup" class="form-label">Blood Group:</label>
+      <input type="text" id="bloodGroup" name="bloodGroup" class="form-control" [(ngModel)]="employee.bloodGroup" />
+    </div>
+    <div class="mb-3">
+      <label for="gender" class="form-label">Gender:</label>
+      <select id="gender" name="gender" class="form-control" [(ngModel)]="employee.gender" required>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+    <div class="mb-3">
+      <button type="submit" class="btnbtn" [disabled]="!employeeForm.valid">
+        Add Employee
+      </button>
+    </div>
+  </form>
+</div>

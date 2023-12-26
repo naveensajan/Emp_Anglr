@@ -1,0 +1,33 @@
+<h1 style="text-align: center; margin-bottom: 40px; color: #4259ae;"> Leave Approval </h1>
+
+<div class="table-responsive">
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Employee ID</th>
+        <th>Start Date</th>
+        <th>End Date</th>
+        <th>Reason</th>
+        <th>Leave type</th>
+        <th>Leave Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let request of pendingLeaveRequests">
+        <td>{{ request.employeeId }}</td>
+        <td>{{ request.startDate }}</td>
+        <td>{{ request.endDate }}</td>
+        <td> {{request.reason}} </td>
+        <td> {{request.leaveType}} </td>
+
+        <td>
+          <button class="btn btn-success" (click)="approveLeave(request.id)"><i class="fas fa-check"
+              style="color: #00ff00;"></i>
+          </button> &nbsp;
+          <button class="btn btn-danger" (click)="rejectLeave(request.id)"><i class="fas fa-times"
+              style="color: #ff0000;"></i></button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

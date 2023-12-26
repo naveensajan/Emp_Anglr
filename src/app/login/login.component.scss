@@ -1,0 +1,105 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  form {
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+    border: 1px solid white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    color: #2d51b3;
+    text-align: center; // Center the text
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #2d51b3;
+  }
+  
+  input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #95a5a6;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  button {
+    background-color: #2d51b3;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  button:hover {
+    background-color: #5b73b6;
+  }
+  
+
+
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+  }
+
+  .vector-image {
+    flex: 1;
+    padding: 20px; /* Adjust the padding as needed */
+  }
+
+  .vector-image img {
+    width: 70%; /* Ensure the image takes the full width of its container */
+    height: auto;
+    display: block;
+  }
+
+  form {
+    flex: 1;
+    padding: 20px; /* Adjust the padding as needed */
+    max-width: 400px; /* Adjust the maximum width of the form */
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  button {
+    width: 100%;
+    padding: 10px;
+  }

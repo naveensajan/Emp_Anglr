@@ -1,0 +1,45 @@
+<!-- fontawsome link -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+<!-- fontawsome link -->
+
+<div class="wrapper">
+  <input type="checkbox" id="btn" hidden>
+  <label for="btn" class="menu-btn">
+    <i class="fas fa-bars"></i>
+    <i class="fas fa-times"></i>
+  </label>
+  <nav id="sidebar">
+    <div class="title">
+      <img class="rounded-image" [src]="loggedInEmployee.image" alt="Employee Image">
+      {{ loggedInEmployee.name |uppercase}}
+
+    </div>
+    <ul class="list-items">
+      <li><a href="employee-dashboard"><i class="fas fa-home"></i>Home</a></li>
+      <li><a href="emp-details"><i class="fas fa-address-book"></i>Profile</a></li>
+      <li><a href="leave-req"><i class="fas fa-envelope"></i>Leave Request</a></li>
+      <li><a (click)="logout()"><i class="fas fa-cog"></i>Logout</a></li>
+    </ul>
+  </nav>
+
+  <!-- rightsidecontent -->
+  <div class="main-content">
+
+    <div *ngIf="loggedInEmployee">
+      <h1>Welcome, <span>{{ loggedInEmployee.name | uppercase }}</span></h1>
+      <h3>{{loggedInEmployee.designation |uppercase }}</h3>
+
+      <div class="statusbtn">
+        Set Status:<button class="btn-1" type="button" (click)="markOnline()"
+          [ngClass]="{'active': isOnline}">Online</button>
+        &nbsp;
+        Set Status: <button class="btn-2" type="button" (click)="markOffline()"
+          [ngClass]="{'active': !isOnline}">Offline</button>
+      </div>
+
+    </div>
+ 
+  </div>
+  <!-- rightsidecontent ends -->
+
+</div>

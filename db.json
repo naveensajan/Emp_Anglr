@@ -1,0 +1,176 @@
+{
+  "employees": [
+    {
+      "name": "tom baby",
+      "email": "tom@gmail.com",
+      "phone": "934555554444",
+      "age": 23,
+      "dob": "2023-12-08",
+      "image": "https://img.freepik.com/free-photo/happy-african-american-professional-manager-smiling-looking-camera-headshot-portrait_1163-5134.jpg",
+      "bloodGroup": "b+",
+      "gender": "male",
+      "leaveDetails": "",
+      "designation": "embedded developer",
+      "username": "tom",
+      "password": "tom",
+      "id": 1,
+      "online": false
+    },
+    {
+      "name": "basil babu",
+      "email": "basil@gmail.com",
+      "phone": 4756344434,
+      "age": 28,
+      "dob": "2023-12-19",
+      "image": "https://www.shutterstock.com/image-photo/profile-picture-smiling-successful-young-260nw-2040223583.jpg",
+      "bloodGroup": "A+",
+      "gender": "male",
+      "leaveDetails": "",
+      "designation": "system admin",
+      "username": "basil",
+      "password": "basil123",
+      "id": 2,
+      "online": true
+    },
+    {
+      "name": "amal biju",
+      "email": "amal@gmail.com",
+      "phone": 9767546543,
+      "age": 23,
+      "dob": "2023-12-23",
+      "image": "https://img.freepik.com/premium-photo/coaching-motivation-happy-proud-business-leader-meeting-with-diverse-colleagues-office-portrait-male-smiling-during-training-with-workers-discussing-improvement-strategy-planning_590464-81771.jpg?w=360",
+      "bloodGroup": "b-",
+      "gender": "male",
+      "leaveDetails": "",
+      "designation": "GIS Engineer",
+      "username": "amal",
+      "password": "amal123",
+      "id": 3,
+      "online": true
+    },
+    {
+      "name": "iby binu",
+      "email": "iby@gmail.com",
+      "phone": 8988766565,
+      "age": 22,
+      "dob": "2023-12-19",
+      "image": "https://media.istockphoto.com/id/1311655328/photo/im-the-best-asset-in-my-business.jpg?s=1024x1024&w=is&k=20&c=slgSdrwzwX_yohBts0TWsCgU8Dy4wodjwlOJlq4jdbA=",
+      "bloodGroup": "c+",
+      "gender": "female",
+      "leaveDetails": "",
+      "designation": "Frontend developer",
+      "username": "iby",
+      "password": "iby123",
+      "id": 4,
+      "online": true
+    },
+    {
+      "name": "don joseph",
+      "email": "don@gmail.com",
+      "phone": 9207008545,
+      "age": 24,
+      "dob": "2023-12-14",
+      "image": "https://thumbs.dreamstime.com/b/profile-picture-caucasian-male-employee-posing-office-happy-young-worker-look-camera-workplace-headshot-portrait-smiling-190186649.jpg",
+      "bloodGroup": "A+ve",
+      "gender": "male",
+      "leaveDetails": "",
+      "designation": "backend developer",
+      "username": "don",
+      "password": "don123",
+      "id": 5,
+      "online": false
+    }
+  ],
+  "leaveRequests": [
+    {
+      "employeeId": "2",
+      "startDate": "2023-12-22",
+      "endDate": "2023-12-23",
+      "reason": "funeral",
+      "leaveType": "personal",
+      "status": "rejected",
+      "id": 1
+    },
+    {
+      "employeeId": "1",
+      "startDate": "2023-12-15",
+      "endDate": "2023-12-20",
+      "reason": "corona virus",
+      "leaveType": "sick",
+      "status": "approved",
+      "id": 2
+    },
+    {
+      "employeeId": "2",
+      "startDate": "2023-12-30",
+      "endDate": "2023-12-31",
+      "reason": "hospital case",
+      "leaveType": "personal",
+      "status": "approved",
+      "id": 3
+    },
+    {
+      "employeeId": "1",
+      "startDate": "2023-12-01",
+      "endDate": "2023-12-30",
+      "reason": "vacation leave",
+      "leaveType": "vacation",
+      "status": "rejected",
+      "id": 4
+    },
+    {
+      "employeeId": "3",
+      "startDate": "2023-12-03",
+      "endDate": "2023-12-05",
+      "reason": "cold",
+      "leaveType": "sick",
+      "status": "approved",
+      "id": 5
+    },
+    {
+      "employeeId": "2",
+      "startDate": "2023-12-15",
+      "endDate": "2023-12-30",
+      "reason": "sick",
+      "leaveType": "sick",
+      "status": "rejected",
+      "id": 6
+    },
+    {
+      "employeeId": "4",
+      "startDate": "2023-12-12",
+      "endDate": "2023-12-15",
+      "reason": "headache",
+      "leaveType": "sick",
+      "status": "pending",
+      "id": 7
+    },
+    {
+      "employeeId": "4",
+      "startDate": "2023-12-01",
+      "endDate": "2023-12-30",
+      "reason": "annual leave",
+      "leaveType": "vacation",
+      "status": "pending",
+      "id": 8
+    },
+    {
+      "employeeId": "2",
+      "startDate": "2023-12-01",
+      "endDate": "2023-12-30",
+      "reason": "annual leave",
+      "leaveType": "vacation",
+      "status": "pending",
+      "id": 9
+    },
+    {
+      "employeeId": "5",
+      "startDate": "2023-12-06",
+      "endDate": "2023-12-14",
+      "reason": "going out of station",
+      "leaveType": "vacation",
+      "status": "pending",
+      "id": 10
+    }
+  ]
+}

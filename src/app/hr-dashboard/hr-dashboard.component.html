@@ -1,0 +1,39 @@
+<!-- fontawsome link -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+<!-- fontawsome link -->
+<div class="wrapper">
+    <input type="checkbox" id="btn" hidden>
+    <label for="btn" class="menu-btn">
+        <i class="fas fa-bars"></i>
+        <i class="fas fa-times"></i>
+    </label>
+    <nav id="sidebar">
+        <div class="title">
+            <img class="rounded-image"
+                src="https://img.freepik.com/premium-photo/employee-portrait-hd-8k-wallpaper-stock-photographic_853645-69189.jpg">
+            HR-DASHBOARD
+        </div>
+        <ul class="list-items">
+            <li><a href="hr-dashboard"><i class="fas fa-home"></i>Home</a></li>
+            <li><a href="employeedetails"><i class="fas fa-user"></i>Employee Details</a></li>  
+            <li><a href="barchart"><i class="fas fa-stream"></i>Bar chart</a></li>           
+            <li><a href="doughnutchart"><i class="fas fa-globe-asia"></i>Doughnut Chart</a></li>
+            <li><a href="addemployee"><i class="fas fa-user"></i>Add Employee</a></li>          
+            <li><a href="leaveapplication"><i class="fas fa-envelope"></i>Leave Details</a></li>            
+            <li><a (click)="logout()"><i class="fas fa-cog"></i>Logout</a></li>
+        </ul>
+    </nav>
+
+    <!-- rightsidecontent -->
+    <div class="main-content">
+      <app-hr-leave></app-hr-leave>
+      <div class="charts">
+        <app-doughnut-chart></app-doughnut-chart>
+        <app-bar-chart></app-bar-chart>
+      </div>
+   
+      <app-copyrightfooter></app-copyrightfooter>
+    </div>
+    <!-- rightsidecontent ends -->
+
+</div>

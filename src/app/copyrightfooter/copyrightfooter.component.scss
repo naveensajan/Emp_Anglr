@@ -1,0 +1,79 @@
+.footer {
+    background: linear-gradient(72deg, #23133F 9.81%, #08205C 50.72%, #01326A 93.38%);
+    color: white;
+    padding-top: 70px;
+    padding-bottom: 30px
+
+    &__img {
+        padding-bottom: 20px;
+    }
+
+    &__p {
+        color: white;
+        font-family: Poppins;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    &__indus {
+        color: white;
+        font-family: Poppins;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+
+
+}
+
+
+
+
+
+
+.copyright {
+
+    background: #150D2B;
+    color: white;
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+
+    padding-top: 20px;
+    padding-bottom: 30px;
+
+
+    &__first {
+        display: flex;
+        justify-content: space-evenly;
+        color: white;
+        font-family: Poppins;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+
+    }
+    &__img {
+        padding-top: 20px;
+
+    }
+    &__p {
+        color: white;
+        font-family: Poppins;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        opacity: 0.6;
+        padding-top: 20px;
+
+    }
+
+}

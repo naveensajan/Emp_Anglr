@@ -1,0 +1,55 @@
+<a class="btn ms-2 me-2 mt-3" (click)="goBack()">
+  <i class="fas fa-arrow-left"></i>
+</a>
+<!-- details start -->
+<div class="container mt-3">
+  <div class="card">
+    <div class="card-body">
+      <!-- Details heading -->
+      <h2 class="text-center mb-4">
+        My Profile
+        <i class="fa-regular fa-id-badge"></i>
+      </h2>
+
+      <div id="details" *ngIf="loggedInEmployee">
+        <!-- employee image -->
+        <div class="card " style="width: 200px;">
+          <img [src]="loggedInEmployee.image" alt="Employee Image" class="card-img-top img-thumbnail" />
+          <a class="btn btn-warning" [routerLink]="['/edit-employee', loggedInEmployee.id]">
+            Edit Profile
+          </a>
+        </div>
+        <!-- employee image ends -->
+
+        <div class="card flex-grow-1">
+          <div class="card-body">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Phone</th>
+                  <th>Age</th>
+                  <th>DOB</th>
+                  <th>Blood Group</th>
+                  <th>Gender</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>{{ loggedInEmployee.name }}</td>
+                  <td>{{ loggedInEmployee.email }}</td>
+                  <td>{{ loggedInEmployee.phone }}</td>
+                  <td>{{ loggedInEmployee.age }}</td>
+                  <td>{{ loggedInEmployee.dob }}</td>
+                  <td>{{ loggedInEmployee.bloodGroup }}</td>
+                  <td>{{ loggedInEmployee.gender }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

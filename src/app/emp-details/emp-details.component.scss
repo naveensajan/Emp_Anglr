@@ -1,0 +1,75 @@
+
+
+.btn-back {
+    margin-left: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .container-employee-profile {
+    margin-top: 3rem;
+  }
+  
+  .card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-body {
+    padding: 2rem;
+  }
+  
+  .card-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+  
+  .card-heading i {
+    margin-left: 0.5rem;
+    font-size: 1.5rem;
+  }
+  
+ 
+  .table {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 0.75rem;
+  }
+  
+  thead {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+ 
+  .card-image {
+    width: 200px;
+    margin-right: 20px;
+  }
+  
+  .card-img-top {
+    border-radius: 10px;
+  }
+  
+
+  .text-end {
+    margin-top: 1rem;
+  }
+  
+  .btn-edit-details {
+    background-color: orange;
+    color: #212529;
+    border: 1px solid #ffc107;
+  }
+  
+  .btn-edit-details:hover {
+    background-color: #e0a800;
+    border-color: #e0a800;
+  }
+  
