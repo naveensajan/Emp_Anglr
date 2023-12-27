@@ -18,13 +18,16 @@ export class DoughnutChartComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+     // Fetch employee data and create the doughnut chart on component initialization
     this.fetchEmployeeData();
   }
- 
+  // Fetch employee data from the service
   private fetchEmployeeData(): void {
     this.employeeService.getEmployees().subscribe(
       (employees) => {
+        // Store the fetched employee data
         this.employeeData = employees;
+         // Create the doughnut chart
         this.createChart();
       },
       (error) => {
@@ -32,11 +35,14 @@ export class DoughnutChartComponent implements OnInit {
       }
     );
   }
-
+ // Create the doughnut chart using D3.js
   private createChart(): void {
+     // Run D3 code outside of Angular zone to avoid change detection conflicts
     this.zone.runOutsideAngular(() => {
+      // Select the SVG element within the component's template
       const svg = d3.select(this.elementRef.nativeElement).select('svg');
-      svg.selectAll('*').remove(); 
+      svg.selectAll('*').remove();// Clear any existing elements inside the SVG
+      // Define chart dimensions and properties 
       const width = 700;
     
       const height = 600;
@@ -45,23 +51,23 @@ export class DoughnutChartComponent implements OnInit {
 
       const color = d3.scaleOrdinal(d3.schemeSet1);
 
-
+ // Create a chart group within the SVG
       const chartGroup = svg
         .append('g')
         .attr('transform', `translate(${width / 2},${height / 2})`); 
 
-   
+    // Define the arc generator for the doughnut chart
       const arc = d3
         .arc<PieArcDatum<any>>()
         .innerRadius(radius - 150)
         .outerRadius(radius);
 
-    
+      // Define the pie generator
       const pie = d3
         .pie<any>()
         .sort(null)
         .value((d) => 1);
-
+ // Create slices (paths) for each data point
       const slices = chartGroup
         .selectAll('path')
         .data(pie(this.employeeData))
@@ -74,7 +80,7 @@ export class DoughnutChartComponent implements OnInit {
         .attr('stroke', '#fff')
         .attr('stroke-width', 2);
       
-   
+      // Add text labels to each slice
       const textLabels = chartGroup
         .selectAll('text')
         .data(pie(this.employeeData))

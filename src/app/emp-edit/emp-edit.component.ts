@@ -9,25 +9,29 @@ import Swal from 'sweetalert2';
   styleUrls: ['./emp-edit.component.scss'],
 })
 export class EmpEditComponent {
-  employeeId: any;
-  employee: any = {};
+  employeeId: any;// Variable to store the ID of the employee being edited
+  employee: any = {};// Variable to store the details of the employee being edited
 
   constructor(
     private route: ActivatedRoute,
     private router: Router,
     private employeeService: EmployeeService
-  ) {}
+  ) { }
 
   ngOnInit(): void {
+    // Subscribe to route parameters to get the employee ID from the URL
     this.route.params.subscribe((params) => {
+      // Extract the employee ID from the route parameters
       this.employeeId = +params['id'];
+      // Load details of the employee to be edited
       this.loadEmployeeDetails();
     });
   }
-
+// Load details of the employee to be edited
   loadEmployeeDetails(): void {
     this.employeeService.getEmployeeDetails(this.employeeId).subscribe(
       (data) => {
+         // Assign fetched employee details to the component variable
         this.employee = data;
       },
       (error) => {
@@ -35,13 +39,15 @@ export class EmpEditComponent {
       }
     );
   }
-
+  // Update employee details
   updateEmployee(): void {
     if (this.employeeId) {
+       // Call the employee service to update the employee details
       this.employeeService
         .updateEmployee(this.employeeId, this.employee)
         .subscribe(
           () => {
+            // Display success message using SweetAlert2
             Swal.fire({
               icon: 'success',
               title: 'Success',
@@ -55,6 +61,7 @@ export class EmpEditComponent {
             });
           },
           (error) => {
+             // Display error message using SweetAlert2
             Swal.fire({
               icon: 'error',
               title: 'Error',
@@ -65,7 +72,8 @@ export class EmpEditComponent {
         );
     }
   }
+   // Navigate back to the employee details page
   goBack(): void {
-    this.router.navigate(['/emp-details']); 
+    this.router.navigate(['/emp-details']);
   }
 }
