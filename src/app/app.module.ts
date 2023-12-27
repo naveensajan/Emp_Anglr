@@ -15,7 +15,6 @@ import { EmpDetailsComponent } from './emp-details/emp-details.component';
 import { LeaveRequestComponent } from './leave-request/leave-request.component';
 import { EmpEditComponent } from './emp-edit/emp-edit.component';
 import { HrLeaveComponent } from './hr-leave/hr-leave.component';
-import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
@@ -52,8 +51,7 @@ import { WildcardComponent } from './wildcard/wildcard.component';
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    ReactiveFormsModule,
-    MatSidenavModule,
+    ReactiveFormsModule,   
     MatButtonModule,
     MatToolbarModule,
     MatIconModule

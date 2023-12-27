@@ -7,9 +7,13 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class AuthService {
+  // API endpoint for employee data
   private apiUrl = 'http://localhost:3000/employees';
+  // Default HR credentials
   private hrCredentials = { username: 'hr', password: 'hr123' };
+  // Array to store employee credentials fetched from the server
   private employeeCredentials: any[] = [];
+  // ID of the currently logged-in employee
   private loggedInEmployeeId: number | null = null;
 
   constructor(private http: HttpClient) {
@@ -17,6 +21,7 @@ export class AuthService {
     this.http
       .get<any[]>(this.apiUrl)
       .subscribe((employees) => {
+        // Map the fetched data to the employeeCredentials array
         this.employeeCredentials = employees.map((employee) => ({
           id: employee.id,
           username: employee.username,
@@ -29,66 +34,68 @@ export class AuthService {
   login(username: string, password: string): Observable<boolean> {
     return this.http.get<any[]>(this.apiUrl).pipe(
       map((employees) => {
-        // check HR credentials
+        // Check if the provided credentials match HR credentials
         if (
           username === this.hrCredentials.username &&
           password === this.hrCredentials.password
         ) {
+          // Set role to 'hr' in localStorage
           localStorage.setItem('role', 'hr');
           return true;
         }
 
-        //check  employee credentials
+        // Check if the provided credentials match any employee's credentials
         const employee = employees.find(
           (emp) => emp.username === username && emp.password === password
         );
 
         if (employee) {
+          // Set role to 'employee' and store employee ID in localStorage
           localStorage.setItem('role', 'employee');
           localStorage.setItem('employeeId', employee.id.toString());
-          return true;
+          return true;// Successful login
         }
 
         console.log('Authentication failed. Returning false.');
-        return false;
+        return false;// Authentication failed
       })
     );
   }
-  // logout
+  // Logout function to clear role and employee ID from localStorage
   logout(): void {
     localStorage.removeItem('role');
     localStorage.removeItem('employeeId');
   }
-  // get role hr or employee
+ // Get the role of the currently logged-in user
   getRole(): string | null {
     return localStorage.getItem('role');
   }
-  // Check if the user is logged in
+  // Check if the user is currently logged in
   isLoggedIn(): boolean {
     return this.getRole() !== null;
   }
-  // Set and get the ID of the logged-in employee
+    // Set the ID of the currently logged-in employee in localStorage
   setLoggedInEmployeeId(employeeId: string): void {
     localStorage.setItem('employeeId', employeeId);
   }
-  // get loged employee id
+// Get the ID of the currently logged-in employee from localStorage
   getLoggedInEmployeeId(): string | null {
     return localStorage.getItem('employeeId');
   }
-  // Clear the logged-in employee ID
+ // Clear the stored ID of the currently logged-in employee
   clearLoggedInEmployeeId(): void {
     localStorage.removeItem('employeeId');
   }
-  // Set, get, and clear logged-in employee details
+   // Set the details of the currently logged-in employee in localStorage
   setLoggedInEmployeeDetails(details: any): void {
     localStorage.setItem('employeeDetails', JSON.stringify(details));
   }
-  // fetch logged in employee details
+   // Get the details of the currently logged-in employee from localStorage
   getLoggedInEmployeeDetails(): any | null {
     const details = localStorage.getItem('employeeDetails');
     return details ? JSON.parse(details) : null;
   }
-  // clear loggedin employee details
+  // Clear the stored details of the currently logged-in employee
   clearLoggedInEmployeeDetails(): void {
     localStorage.removeItem('employeeDetails');
   }
