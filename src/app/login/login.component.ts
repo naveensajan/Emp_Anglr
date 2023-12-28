@@ -1,4 +1,3 @@
-// login.component.ts
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../services/auth.service';
 import { Router } from '@angular/router';
@@ -12,20 +11,26 @@ import { Observable } from 'rxjs';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-
+// Properties for storing username, password, and loading state
   username: string = '';
   password: string = '';
-  loading: boolean = false; // Add loading property
-
+  loading: boolean = false; 
+ // Constructor that injects necessary services
   constructor(private authService: AuthService, private router: Router) {}
 
   ngOnInit(): void {}
-
+// Method to handle the login process
   login(): void {
-   
+
+     // Set loading to true during the login process--------------
+     this.loading = true;
+
+    // Call the login method from the AuthService
     this.authService.login(this.username, this.password).subscribe(
+      // Success callback
       success => {
         if (success) {
+            // Check the role and navigate to the appropriate dashboard
           if (this.authService.getRole() === 'hr') {
             this.router.navigate(['/hr-dashboard']);
           } else {
@@ -61,7 +66,15 @@ export class LoginComponent implements OnInit {
           text: 'An error occurred during login. Please try again later.'
         });
       },
-     
+
+
+      () => {
+        // Set loading to false after the login process is complete--------------------
+        this.loading = false;
+      }
+
+
+
     );
   }
 }

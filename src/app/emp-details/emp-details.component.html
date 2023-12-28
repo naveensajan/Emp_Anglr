@@ -13,9 +13,9 @@
 
       <div id="details" *ngIf="loggedInEmployee">
         <!-- employee image -->
-        <div class="card " style="width: 200px;">
+        <div class="card " style="width: 200px; margin-left: 27rem;">
           <img [src]="loggedInEmployee.image" alt="Employee Image" class="card-img-top img-thumbnail" />
-          <a class="btn btn-warning" [routerLink]="['/edit-employee', loggedInEmployee.id]">
+          <a class="btn" [routerLink]="['/edit-employee', loggedInEmployee.id]">
             Edit Profile
           </a>
         </div>

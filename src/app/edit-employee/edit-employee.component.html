@@ -1,11 +1,11 @@
 
 <button class="btn mb-3 mt-3 ms-3" (click)="goBack()">
-  <i class="fa-solid fa-2xl fa-circle-left" style="color: #000000"></i>
+  <i class="fas fa-arrow-left" style="color: black; " ></i>
 </button>
 <!-- edit form -->
 <div class="container">
   <h2>Edit Employee</h2>
-  <hr />
+
   <form class="form" (ngSubmit)="updateEmployee()">
     <div class="mb-3">
       <label for="password" class="form-label">Password:</label>
@@ -145,7 +145,7 @@
     </div>
     <div class="mb-3">
       <button (click)="updateEmployee()" type="submit" class="btn btn-primary">
-        Update Employee
+        Update
       </button>
     </div>
   </form>
