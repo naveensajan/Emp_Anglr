@@ -41,6 +41,8 @@ export class EmployeeDashboardComponent implements OnInit {
         });
     }
   }
+
+  
 // Method to mark the employee as online
   markOnline(): void {
     this.isOnline = true;

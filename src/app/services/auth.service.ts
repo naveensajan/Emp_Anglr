@@ -74,6 +74,8 @@ export class AuthService {
   isLoggedIn(): boolean {
     return this.getRole() !== null;
   }
+
+  
     // Set the ID of the currently logged-in employee in localStorage
   setLoggedInEmployeeId(employeeId: string): void {
     localStorage.setItem('employeeId', employeeId);
@@ -86,6 +88,8 @@ export class AuthService {
   clearLoggedInEmployeeId(): void {
     localStorage.removeItem('employeeId');
   }
+
+
    // Set the details of the currently logged-in employee in localStorage
   setLoggedInEmployeeDetails(details: any): void {
     localStorage.setItem('employeeDetails', JSON.stringify(details));

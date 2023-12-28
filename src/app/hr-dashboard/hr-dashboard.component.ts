@@ -11,6 +11,8 @@ import { AuthService } from '../services/auth.service';
 export class HrDashboardComponent {
 // Constructor that injects necessary services
   constructor(private router: Router,private authService:AuthService){}
+
+  
 // Method to handle the logout functionality
   logout(){
     // Call the logout method from the AuthService
