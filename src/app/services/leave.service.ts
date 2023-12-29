@@ -22,10 +22,10 @@ export class LeaveService {
     return this.http.get<any[]>(url);
   }
  // Method to get leave counts
-  getLeaveCounts(): Observable<any[]> {
-    const url = `${this.apiUrl}/leave-counts`;
-    return this.http.get<any[]>(url);
-  }
+  // getLeaveCounts(): Observable<any[]> {
+  //   const url = `${this.apiUrl}/leave-counts`;
+  //   return this.http.get<any[]>(url);
+  // }
   // Method to get employee details
   getEmployeeDetails(employeeId: number): Observable<any> {
     const url = `${this.apiUrl}/employees/${employeeId}`;

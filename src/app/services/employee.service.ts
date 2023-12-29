@@ -22,7 +22,9 @@ export class EmployeeService {
     const url = `${this.apiUrl}/${employeeId}`;
     return this.http.get<any>(url);
   }
-  // Method to add a new employee
+
+
+    // Method to add a new employee
   addEmployee(employee: any): Observable<any> {
     return this.http.post(this.apiUrl, employee);
   }
@@ -36,6 +38,8 @@ export class EmployeeService {
     const url = `${this.apiUrl}/${employeeId}`;
     return this.http.delete(url);
   }
+
+  
   // Method to notify subscribers to refresh the employee list
   notifyRefreshList(): void {
     this.refreshListSubject.next();

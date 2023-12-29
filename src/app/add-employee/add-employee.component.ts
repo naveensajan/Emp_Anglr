@@ -44,7 +44,7 @@ export class AddEmployeeComponent {
         });
         console.log('Employee added successfully.');
        // Navigate to the employee-details page after successful addition
-        this.router.navigate(['/employee-details']);
+        this.router.navigate(['employeedetails']);
       },
       (error) => {
          // Display an error message using SweetAlert2 library

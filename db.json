@@ -19,13 +19,13 @@
     {
       "name": "basil babu",
       "email": "basil@gmail.com",
-      "phone": 4756344434,
+      "phone": "475632323",
       "age": 28,
       "dob": "2023-12-19",
       "image": "https://www.shutterstock.com/image-photo/profile-picture-smiling-successful-young-260nw-2040223583.jpg",
       "bloodGroup": "A+",
       "gender": "male",
-      "leaveDetails": "",
+      "leaveDetails": "3 leave",
       "designation": "system admin",
       "username": "basil",
       "password": "basil123",
@@ -151,7 +151,7 @@
       "endDate": "2023-12-30",
       "reason": "annual leave",
       "leaveType": "vacation",
-      "status": "pending",
+      "status": "approved",
       "id": 8
     },
     {
@@ -169,7 +169,7 @@
       "endDate": "2023-12-14",
       "reason": "going out of station",
       "leaveType": "vacation",
-      "status": "pending",
+      "status": "rejected",
       "id": 10
     }
   ]
