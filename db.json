@@ -171,6 +171,24 @@
       "leaveType": "vacation",
       "status": "rejected",
       "id": 10
+    },
+    {
+      "employeeId": "5",
+      "startDate": "2023-12-30",
+      "endDate": "2024-01-01",
+      "reason": "cough and cold",
+      "leaveType": "sick",
+      "status": "pending",
+      "id": 11
+    },
+    {
+      "employeeId": "1",
+      "startDate": "2023-12-22",
+      "endDate": "2023-12-23",
+      "reason": "health checkup",
+      "leaveType": "personal",
+      "status": "pending",
+      "id": 12
     }
   ]
 }
