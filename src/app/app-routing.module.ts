@@ -18,10 +18,10 @@ import { WildcardComponent } from './wildcard/wildcard.component';
 
 
 const routes: Routes = [
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   { path: 'hr-dashboard', component: HrDashboardComponent, canActivate: [AuthGuard] },
-  { path: 'employee-dashboard', component: EmployeeDashboardComponent, canActivate: [AuthGuard] },
-  { path: '', redirectTo: '/login', pathMatch: 'full' },
+  { path: 'employee-dashboard', component: EmployeeDashboardComponent, canActivate: [AuthGuard] }, 
   { path: 'addemployee', component: AddEmployeeComponent,canActivate: [AuthGuard] },
   { path: 'employeedetails', component: EmployeeDetailsComponent,canActivate: [AuthGuard] }, 
   { path: 'edit/:id', component: EditEmployeeComponent,canActivate: [AuthGuard] },

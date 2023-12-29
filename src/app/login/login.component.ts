@@ -18,10 +18,11 @@ export class LoginComponent implements OnInit {
   constructor(private authService: AuthService, private router: Router) {}
 
   ngOnInit(): void {}
+
 // Method to handle the login process
   login(): void {
 
-     // Set loading to true during the login process--------------
+     // Set loading to true during the login process
      this.loading = true;
 
     // Call the login method from the AuthService
@@ -68,7 +69,7 @@ export class LoginComponent implements OnInit {
 
 
       () => {
-        // Set loading to false after the login process is complete--------------------
+        // Set loading to false after the login process is complete
         this.loading = false;
       }
 

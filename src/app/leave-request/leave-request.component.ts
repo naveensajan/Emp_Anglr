@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { LeaveService } from '../services/leave.service';
 import { AuthService } from '../services/auth.service';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';  //reactive forms
 import { Router } from '@angular/router';
 
 @Component({
@@ -21,7 +21,7 @@ export class LeaveRequestComponent implements OnInit {
     private fb: FormBuilder,
     private router:Router
   ) {
-     // Initialize the leaveForm with form controls and validators
+     // Initialize the leaveForm with form controls and validators in reactive forms
     this.leaveForm = this.fb.group({
       startDate: ['', Validators.required],
       endDate: ['', Validators.required],
