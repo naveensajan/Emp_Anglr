@@ -12,13 +12,16 @@ import { LeaveService } from '../services/leave.service';
 export class LeaveApplicationComponent{
   employees: any[] = []; // Array to store employee data
   location: any;// Variable to store location data
- // Constructor that injects necessary services
+ 
+  // Constructor that injects necessary services
   constructor(private router: Router, private employeeService: EmployeeService, private leaveService: LeaveService ) {}
- // Lifecycle hook called after the component is initialized
+ 
+  // Lifecycle hook called after the component is initialized
   ngOnInit(): void {
     this.loadEmployees();  // Load employees and their leave details when the component is initialized
   }
- // Method to fetch employees and their leave details
+ 
+  // Method to fetch employees and their leave details
   loadEmployees(): void {
     this.employeeService.getEmployees().subscribe(
        // Successful response callback

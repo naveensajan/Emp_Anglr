@@ -22,9 +22,6 @@ export class LoginComponent implements OnInit {
 // Method to handle the login process
   login(): void {
 
-     // Set loading to true during the login process
-     this.loading = true;
-
     // Call the login method from the AuthService
     this.authService.login(this.username, this.password).subscribe(
       // Success callback
@@ -66,14 +63,6 @@ export class LoginComponent implements OnInit {
           text: 'An error occurred during login. Please try again later.'
         });
       },
-
-
-      () => {
-        // Set loading to false after the login process is complete
-        this.loading = false;
-      }
-
-
 
     );
   }

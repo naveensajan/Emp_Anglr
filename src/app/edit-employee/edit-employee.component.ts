@@ -27,7 +27,7 @@ export class EditEmployeeComponent implements OnInit {
       this.loadEmployeeDetails();
     });
   }
-  // load the employee details
+  // load the employee details method in employee service
   loadEmployeeDetails(): void {
     this.employeeService.getEmployeeDetails(this.employeeId).subscribe(
       (data) => {
@@ -38,7 +38,7 @@ export class EditEmployeeComponent implements OnInit {
       }
     );
   }
-  // update employee details
+  // update employee details method in employee service
   updateEmployee(): void {
     this.employeeService
       .updateEmployee(this.employeeId, this.employee)
@@ -49,7 +49,7 @@ export class EditEmployeeComponent implements OnInit {
             text: 'Employee details updated successfully.',
             icon: 'success',
           });
-          this.router.navigate(['/employee-details']);
+          this.router.navigate(['/employeedetails']);
         },
         (error) => {
           Swal.fire({

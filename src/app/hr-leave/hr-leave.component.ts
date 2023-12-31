@@ -10,16 +10,19 @@ import Swal from 'sweetalert2';
 export class HrLeaveComponent {
    // Array to store pending leave requests
   pendingLeaveRequests: any[] = [];
- // Constructor that injects necessary services and fetches pending leave requests on component initialization
-  constructor(private hrLeaveService: HrLeaveService) {
+ 
+  // Constructor that injects necessary services and fetches pending leave requests on component initialization
+   constructor(private hrLeaveService: HrLeaveService) {
     this.fetchPendingLeaveRequests();
   }
+  
  // Method to fetch pending leave requests from the service
   fetchPendingLeaveRequests(): void {
     this.hrLeaveService.getPendingLeaveRequests().subscribe(requests => {
       this.pendingLeaveRequests = requests;
     });
   }
+
 // Method to approve a leave request
   approveLeave(leaveRequestId: number): void {
     this.hrLeaveService.approveLeave(leaveRequestId).subscribe(() => {

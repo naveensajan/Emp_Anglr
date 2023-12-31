@@ -12,7 +12,8 @@ import { LeaveService } from '../services/leave.service';
 export class EmployeeDetailsComponent implements OnInit {
 // Define class properties
   employees: any[] = [];// Array to store employee data 
-  location: any;// Variable to store location data
+ 
+
 // Constructor that injects necessary services
   constructor(private router: Router, private employeeService: EmployeeService, private leaveService: LeaveService ) {}
  // Lifecycle hook called after the component is initialized

@@ -1,6 +1,5 @@
-
 <button class="btn mb-3 mt-3 ms-3" (click)="goBack()">
-  <i class="fas fa-arrow-left" style="color: black; " ></i>
+  <i class="fas fa-arrow-left" style="color: black; "></i>
 </button>
 <!-- edit form -->
 <div class="container">
@@ -9,140 +8,56 @@
   <form class="form" (ngSubmit)="updateEmployee()">
     <div class="mb-3">
       <label for="password" class="form-label">Password:</label>
-      <input
-        type="text"
-        id="password"
-        name="password"
-        class="form-control"
-        [(ngModel)]="employee.password"
-        required
-      />
+      <input type="text" id="password" name="password" class="form-control" [(ngModel)]="employee.password" required />
     </div>
     <div class="mb-3">
       <label for="username" class="form-label">Username:</label>
-      <input
-        type="text"
-        id="username"
-        name="username"
-        class="form-control"
-        [(ngModel)]="employee.username"
-        required
-      />
+      <input type="text" id="username" name="username" class="form-control" [(ngModel)]="employee.username" required />
     </div>
     <div class="mb-3">
       <label for="designation" class="form-label">Designation:</label>
-      <input
-        type="text"
-        id="designation"
-        name="designation"
-        class="form-control"
-        [(ngModel)]="employee.designation"
-        required
-      />
+      <input type="text" id="designation" name="designation" class="form-control" [(ngModel)]="employee.designation"
+        required />
     </div>
     <div class="mb-3">
       <label for="name" class="form-label">Name:</label>
-      <input
-        type="text"
-        id="name"
-        name="name"
-        class="form-control"
-        [(ngModel)]="employee.name"
-        required
-      />
+      <input type="text" id="name" name="name" class="form-control" [(ngModel)]="employee.name" required />
     </div>
 
     <div class="mb-3">
       <label for="age" class="form-label">age:</label>
-      <input
-        type="number"
-        id="age"
-        name="age"
-        class="form-control"
-        [(ngModel)]="employee.age"
-        required
-      />
+      <input type="number" id="age" name="age" class="form-control" [(ngModel)]="employee.age" required />
     </div>
     <div class="mb-3">
       <label for="name" class="form-label">DOB:</label>
-      <input
-        type="date"
-        id="dob"
-        name="dob"
-        class="form-control"
-        [(ngModel)]="employee.dob"
-        required
-      />
+      <input type="date" id="dob" name="dob" class="form-control" [(ngModel)]="employee.dob" required />
     </div>
     <div class="mb-3">
       <label for="image" class="form-label">image:</label>
-      <input
-        type="text"
-        id="image"
-        name="image"
-        class="form-control"
-        [(ngModel)]="employee.image"
-        required
-      />
+      <input type="text" id="image" name="image" class="form-control" [(ngModel)]="employee.image" required />
     </div>
     <div class="mb-3">
       <label for="phone" class="form-label">phone:</label>
-      <input
-        type="number"
-        id="phone"
-        name="phone"
-        class="form-control"
-        [(ngModel)]="employee.phone"
-        required
-      />
+      <input type="number" id="phone" name="phone" class="form-control" [(ngModel)]="employee.phone" required />
     </div>
     <div class="mb-3">
       <label for="email" class="form-label">email:</label>
-      <input
-        type="email"
-        id="email"
-        name="email"
-        class="form-control"
-        [(ngModel)]="employee.email"
-        required
-      />
+      <input type="email" id="email" name="email" class="form-control" [(ngModel)]="employee.email" required />
     </div>
     <div class="mb-3">
       <label for="bloodGroup" class="form-label">bloodGroup:</label>
-      <input
-        type="text"
-        id="bloodGroup"
-        name="bloodGroup"
-        class="form-control"
-        [(ngModel)]="employee.bloodGroup"
-        required
-      />
+      <input type="text" id="bloodGroup" name="bloodGroup" class="form-control" [(ngModel)]="employee.bloodGroup"
+        required />
     </div>
     <div class="mb-3">
       <label for="gender" class="form-label">Gender:</label>
-      <select
-        id="gender"
-        name="gender"
-        class="form-control"
-        [(ngModel)]="employee.gender"
-        required
-      >
+      <select id="gender" name="gender" class="form-control" [(ngModel)]="employee.gender" required>
         <option value="male">Male</option>
         <option value="female">Female</option>
         <option value="other">Other</option>
       </select>
     </div>
-    <div class="mb-3">
-      <label for="leaveDetails" class="form-label">leaveDetails:</label>
-      <input
-        type="text"
-        id="leaveDetails"
-        name="leaveDetails"
-        class="form-control"
-        [(ngModel)]="employee.leaveDetails"
-        required
-      />
-    </div>
+    
     <div class="mb-3">
       <button (click)="updateEmployee()" type="submit" class="btn btn-primary">
         Update

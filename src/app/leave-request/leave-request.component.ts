@@ -14,7 +14,8 @@ export class LeaveRequestComponent implements OnInit {
   leaveForm: FormGroup;
   employeeId: any; // Employee ID (set based on the logged-in employee)
   leaveRequests: any[] = [];  // Array to store leave requests
- // Constructor that injects necessary services and sets up the form
+ 
+  // Constructor that injects necessary services and sets up the form
   constructor(
     private leaveService: LeaveService,
     private authService: AuthService,
@@ -83,12 +84,15 @@ export class LeaveRequestComponent implements OnInit {
       }
     );
   }
-// Method to navigate back to the employee dashboard
-  goBack(): void {
-    this.router.navigate(['/employee-dashboard']); 
-  }
+
+  
 // Method to check if the leave status is available for display
   isStatusAvailable(leaveRequest: any): boolean {
     return leaveRequest.status === 'approved' || leaveRequest.status === 'rejected';
+  }
+
+  // Method to navigate back to the employee dashboard
+  goBack(): void {
+    this.router.navigate(['/employee-dashboard']); 
   }
 }

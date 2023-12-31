@@ -32,7 +32,7 @@ export class EmpDetailsComponent implements OnInit {
       this.employeeService
         .getEmployeeDetails(+this.loggedInEmployeeId)// Convert ID to a number
         .subscribe((data) => {
-            // Assign fetched details to the component variable
+            // Assign fetched details to the component variable using string interpolation
           this.loggedInEmployee = data;
         });
     }

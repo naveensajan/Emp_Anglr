@@ -3,7 +3,7 @@
     {
       "name": "tom baby",
       "email": "tom@gmail.com",
-      "phone": "934555554444",
+      "phone": 934555554,
       "age": 23,
       "dob": "2023-12-08",
       "image": "https://img.freepik.com/free-photo/happy-african-american-professional-manager-smiling-looking-camera-headshot-portrait_1163-5134.jpg",
@@ -14,7 +14,7 @@
       "username": "tom",
       "password": "tom",
       "id": 1,
-      "online": false
+      "online": true
     },
     {
       "name": "basil babu",
@@ -67,7 +67,7 @@
     {
       "name": "don joseph",
       "email": "don@gmail.com",
-      "phone": 9207008545,
+      "phone": 836535765,
       "age": 24,
       "dob": "2023-12-14",
       "image": "https://thumbs.dreamstime.com/b/profile-picture-caucasian-male-employee-posing-office-happy-young-worker-look-camera-workplace-headshot-portrait-smiling-190186649.jpg",
@@ -78,6 +78,22 @@
       "username": "don",
       "password": "don123",
       "id": 5,
+      "online": false
+    },
+    {
+      "name": "Melvin Sibichen",
+      "email": "melvin@gmail.com",
+      "phone": 9207008545,
+      "age": 25,
+      "dob": "2023-12-07",
+      "image": "https://img.freepik.com/free-photo/portrait-white-man-isolated_53876-40306.jpg?size=626&ext=jpg&ga=GA1.1.1546980028.1703894400&semt=ais",
+      "bloodGroup": "b+",
+      "gender": "male",
+      "leaveDetails": "",
+      "designation": "Full Stack Developer",
+      "username": "melvin",
+      "password": "melvin123",
+      "id": 6,
       "online": false
     }
   ],
@@ -142,7 +158,7 @@
       "endDate": "2023-12-15",
       "reason": "headache",
       "leaveType": "sick",
-      "status": "pending",
+      "status": "approved",
       "id": 7
     },
     {
@@ -160,7 +176,7 @@
       "endDate": "2023-12-30",
       "reason": "annual leave",
       "leaveType": "vacation",
-      "status": "pending",
+      "status": "rejected",
       "id": 9
     },
     {
@@ -189,6 +205,15 @@
       "leaveType": "personal",
       "status": "pending",
       "id": 12
+    },
+    {
+      "employeeId": "6",
+      "startDate": "2023-12-28",
+      "endDate": "2023-12-30",
+      "reason": "sick",
+      "leaveType": "sick",
+      "status": "pending",
+      "id": 13
     }
   ]
 }

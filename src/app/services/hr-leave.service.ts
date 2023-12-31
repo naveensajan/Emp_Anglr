@@ -25,10 +25,5 @@ export class HrLeaveService {
     const url = `${this.apiUrl}/${leaveRequestId}`;
     return this.http.patch(url, { status: 'rejected' });
   }
-   // Method to get leave data
-  getLeaveData(): Observable<any> {
-    return this.http.get<any>(this.apiUrl + '/leave-data');
-  }
 
-  
 }

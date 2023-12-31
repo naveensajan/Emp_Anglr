@@ -11,6 +11,7 @@ export class OnlineStatusService {
 
   // Constructor with dependency injection
   constructor(private http: HttpClient) { }
+  
   // Method to update the online status of an employee
   updateOnlineStatus(employeeId: number, online: boolean): Observable<any> {
     const url = `${this.apiUrl}/${employeeId}`;

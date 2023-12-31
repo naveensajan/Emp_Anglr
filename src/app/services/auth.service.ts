@@ -61,12 +61,8 @@ export class AuthService {
       })
     );
   }
-  // Logout function to clear role and employee ID from localStorage
-  logout(): void {
-    localStorage.removeItem('role');
-    localStorage.removeItem('employeeId');
-  }
- // Get the role of the currently logged-in user
+
+  // Get the role of the currently logged-in user or hr
   getRole(): string | null {
     return localStorage.getItem('role');
   }
@@ -74,33 +70,14 @@ export class AuthService {
   isLoggedIn(): boolean {
     return this.getRole() !== null;
   }
-
-  
-    // Set the ID of the currently logged-in employee in localStorage
-  setLoggedInEmployeeId(employeeId: string): void {
-    localStorage.setItem('employeeId', employeeId);
-  }
-// Get the ID of the currently logged-in employee from localStorage
+  // Get the ID of the currently logged-in employee from localStorage
   getLoggedInEmployeeId(): string | null {
     return localStorage.getItem('employeeId');
   }
- // Clear the stored ID of the currently logged-in employee
-  clearLoggedInEmployeeId(): void {
+  // Logout function to clear role and employee ID from localStorage
+  logout(): void {
+    localStorage.removeItem('role');
     localStorage.removeItem('employeeId');
   }
 
-
-   // Set the details of the currently logged-in employee in localStorage
-  setLoggedInEmployeeDetails(details: any): void {
-    localStorage.setItem('employeeDetails', JSON.stringify(details));
-  }
-   // Get the details of the currently logged-in employee from localStorage
-  getLoggedInEmployeeDetails(): any | null {
-    const details = localStorage.getItem('employeeDetails');
-    return details ? JSON.parse(details) : null;
-  }
-  // Clear the stored details of the currently logged-in employee
-  clearLoggedInEmployeeDetails(): void {
-    localStorage.removeItem('employeeDetails');
-  }
 }

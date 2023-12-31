@@ -3,8 +3,7 @@
 
 <div class="container mt-1">
   <h2>
-    Edit Employee
-  
+    Edit Employee  
   </h2>
  
   <form class="form" (ngSubmit)="updateEmployee()">
@@ -44,12 +43,7 @@
         <option value="female">Female</option>
         <option value="other">Other</option>
       </select>
-    </div>
-    <div class="mb-3">
-      <label for="leaveDetails" class="form-label">LeaveDetails:</label>
-      <input type="text" id="age" name="leaveDetails" class="form-control" [(ngModel)]="employee.leaveDetails"
-        required />
-    </div>
+    </div>  
 
     <button type="submit" class="btn btn-primary">Update </button>
   </form>
