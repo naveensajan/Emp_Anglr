@@ -30,7 +30,7 @@
       "username": "basil",
       "password": "basil123",
       "id": 2,
-      "online": true
+      "online": false
     },
     {
       "name": "amal biju",
@@ -203,7 +203,7 @@
       "endDate": "2023-12-23",
       "reason": "health checkup",
       "leaveType": "personal",
-      "status": "pending",
+      "status": "approved",
       "id": 12
     },
     {

@@ -48,8 +48,7 @@ export class EmployeeDetailsComponent implements OnInit {
             text: 'Employee deleted successfully.',
             icon: 'success'
           });
-           // Notify the service to refresh the employee list
-          this.employeeService.notifyRefreshList(); 
+            
         },
         // Error callback
         (error) => {
