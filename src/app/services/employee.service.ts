@@ -13,6 +13,7 @@ export class EmployeeService {
   // Constructor with dependency injection
   constructor(private http: HttpClient) { }
   // Method to get all employees to list in hrdash
+  
   getEmployees(): Observable<any[]> {
     return this.http.get<any[]>(this.apiUrl);
   }
