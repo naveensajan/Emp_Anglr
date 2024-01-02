@@ -9,7 +9,6 @@
       "image": "https://img.freepik.com/free-photo/happy-african-american-professional-manager-smiling-looking-camera-headshot-portrait_1163-5134.jpg",
       "bloodGroup": "b+",
       "gender": "male",
-      "leaveDetails": "",
       "designation": "embedded developer",
       "username": "tom",
       "password": "tom",
@@ -41,7 +40,6 @@
       "image": "https://img.freepik.com/premium-photo/coaching-motivation-happy-proud-business-leader-meeting-with-diverse-colleagues-office-portrait-male-smiling-during-training-with-workers-discussing-improvement-strategy-planning_590464-81771.jpg?w=360",
       "bloodGroup": "b-",
       "gender": "male",
-      "leaveDetails": "",
       "designation": "GIS Engineer",
       "username": "amal",
       "password": "amal123",
@@ -57,7 +55,6 @@
       "image": "https://media.istockphoto.com/id/1311655328/photo/im-the-best-asset-in-my-business.jpg?s=1024x1024&w=is&k=20&c=slgSdrwzwX_yohBts0TWsCgU8Dy4wodjwlOJlq4jdbA=",
       "bloodGroup": "c+",
       "gender": "female",
-      "leaveDetails": "",
       "designation": "Frontend developer",
       "username": "iby",
       "password": "iby123",
@@ -73,7 +70,6 @@
       "image": "https://thumbs.dreamstime.com/b/profile-picture-caucasian-male-employee-posing-office-happy-young-worker-look-camera-workplace-headshot-portrait-smiling-190186649.jpg",
       "bloodGroup": "A+ve",
       "gender": "male",
-      "leaveDetails": "",
       "designation": "backend developer",
       "username": "don",
       "password": "don123",
@@ -89,7 +85,6 @@
       "image": "https://img.freepik.com/free-photo/portrait-white-man-isolated_53876-40306.jpg?size=626&ext=jpg&ga=GA1.1.1546980028.1703894400&semt=ais",
       "bloodGroup": "b+",
       "gender": "male",
-      "leaveDetails": "",
       "designation": "Full Stack Developer",
       "username": "melvin",
       "password": "melvin123",
@@ -214,6 +209,24 @@
       "leaveType": "sick",
       "status": "pending",
       "id": 13
+    },
+    {
+      "employeeId": "6",
+      "startDate": "2024-01-16",
+      "endDate": "2024-01-18",
+      "reason": "manali trip ",
+      "leaveType": "vacation",
+      "status": "pending",
+      "id": 14
+    },
+    {
+      "employeeId": "6",
+      "startDate": "2024-01-18",
+      "endDate": "2024-01-19",
+      "reason": "medical checkup",
+      "leaveType": "personal",
+      "status": "pending",
+      "id": 15
     }
   ]
 }

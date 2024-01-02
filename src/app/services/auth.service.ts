@@ -52,6 +52,7 @@ export class AuthService {
         if (employee) {
           // Set role to 'employee' and store employee ID in localStorage
           localStorage.setItem('role', 'employee');
+          //converting id to string ,since it is returned as string otherwise their will be mismach in using number as storing in local storage.
           localStorage.setItem('employeeId', employee.id.toString());
           return true;// Successful login
         }
@@ -66,7 +67,7 @@ export class AuthService {
   getRole(): string | null {
     return localStorage.getItem('role');
   }
-  // Check if the user is currently logged in
+  // Check if the user is currently logged in else move to login page using auth guard
   isLoggedIn(): boolean {
     return this.getRole() !== null;
   }
